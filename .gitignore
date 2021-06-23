@@ -19,7 +19,7 @@
 /.docs
 /.install-*
 /.libs
-/Makefile
+/GNUmakefile
 /arm_neon.h
 /config.log
 /config.mk

@@ -96,7 +96,7 @@ clean::
 .PHONY: clean
 distclean: clean
 	if [ -z "$(target)" ]; then \
-      rm -f Makefile; \
+      rm -f GNUmakefile; \
       rm -f config.log config.mk; \
       rm -f vpx_config.[hc] vpx_config.asm; \
       rm -f arm_neon.h; \
@@ -428,7 +428,7 @@ ifneq ($(call enabled,DIST-SRCS),)
     DIST-SRCS-yes            += configure
     DIST-SRCS-yes            += build/make/configure.sh
     DIST-SRCS-yes            += build/make/gen_asm_deps.sh
-    DIST-SRCS-yes            += build/make/Makefile
+    DIST-SRCS-yes            += build/make/GNUmakefile
     DIST-SRCS-$(CONFIG_MSVS)  += build/make/gen_msvs_def.sh
     DIST-SRCS-$(CONFIG_MSVS)  += build/make/gen_msvs_sln.sh
     DIST-SRCS-$(CONFIG_MSVS)  += build/make/gen_msvs_vcxproj.sh

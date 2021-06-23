@@ -1622,7 +1622,7 @@ process() {
     install -D "${source_path}/$f" "$f"
   done
   fi
-  cp "${source_path}/build/make/Makefile" .
+  cp "${source_path}/build/make/GNUmakefile" .
 
   clean_temp_files
   true
