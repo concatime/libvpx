@@ -36,9 +36,11 @@ log(){
   echo "$@" >>$logfile
 }
 
+2>/dev/null cat -n /dev/null && CAT='cat -n' || CAT=cat
+
 log_file(){
   log BEGIN $1
-  cat -n $1 >>$logfile
+  $CAT $1 >>$logfile
   log END $1
 }
 
