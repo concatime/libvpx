@@ -523,9 +523,9 @@ $(LIBVPX_TEST_DATA): $(SRC_PATH_BARE)/test/test-data.sha1
 	)
 
 testdata:: $(LIBVPX_TEST_DATA)
-	$(qexec)[ -x "$$(which sha1sum)" ] && sha1sum=sha1sum;\
-          [ -x "$$(which shasum)" ] && sha1sum=shasum;\
-          [ -x "$$(which sha1)" ] && sha1sum=sha1;\
+	$(qexec)[ -x "$$(command -v sha1sum)" ] && sha1sum=sha1sum;\
+          [ -x "$$(command -v shasum)" ] && sha1sum=shasum;\
+          [ -x "$$(command -v sha1)" ] && sha1sum=sha1;\
           if [ -n "$${sha1sum}" ]; then\
             set -e;\
             echo "Checking test data:";\

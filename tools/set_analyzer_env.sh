@@ -35,7 +35,7 @@ case "${sanitizer}" in
     ;;
 esac
 
-if [ ! $(which clang) ]; then
+if [ ! $(command -v clang) ]; then
   # TODO(johannkoenig): Support gcc analyzers.
   echo "ERROR: 'clang' must be in your PATH"
   return 1

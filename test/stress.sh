@@ -23,9 +23,9 @@ SHA1_FILE="$(dirname $0)/test-data.sha1"
 
 # Set sha1sum to proper sha program (sha1sum, shasum, sha1). This code is
 # cribbed from libs.mk.
-[ -x "$(which sha1sum)" ] && sha1sum=sha1sum
-[ -x "$(which shasum)" ] && sha1sum=shasum
-[ -x "$(which sha1)" ] && sha1sum=sha1
+[ -x "$(command -v sha1sum)" ] && sha1sum=sha1sum
+[ -x "$(command -v shasum)" ] && sha1sum=shasum
+[ -x "$(command -v sha1)" ] && sha1sum=sha1
 
 # Download a file from the url and check its sha1sum.
 download_and_check_file() {
